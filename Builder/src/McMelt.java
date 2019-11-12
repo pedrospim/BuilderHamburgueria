@@ -3,8 +3,10 @@ public class McMelt implements ReceitaDeHamburguer{
 
 	private Hamburguer hamburguer;
 	
+	
 	public McMelt() {
 		this.hamburguer = new Hamburguer();
+		hamburguer.setNome("McMelt");
 	}
 	
 	@Override

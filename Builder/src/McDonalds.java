@@ -5,11 +5,15 @@ public class McDonalds {
 		ReceitaDeHamburguer mcMelt = new McMelt();
 		ReceitaDeHamburguer bigMac = new BigMac();
 		
-		Cozinheiro antonio = new Cozinheiro(mcMelt);
-		Cozinheiro frederico = new Cozinheiro(bigMac);
+		Cozinheiro antonio = new Cozinheiro("antonio", bigMac);
 		
 		antonio.prepararHamburguer();
-		frederico.prepararHamburguer();
+		
+		Cozinheiro betania = new Cozinheiro("Betania", mcMelt);
+		
+		betania.prepararHamburguer();
+		
+		Hamburguer meuLanche = betania.getHamburguer();
     
     }
 	

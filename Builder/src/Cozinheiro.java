@@ -1,9 +1,12 @@
 
 public class Cozinheiro {
 	
+	private String nome;
+	
 	private ReceitaDeHamburguer receita;
 	
-	public Cozinheiro(ReceitaDeHamburguer receita) {
+	public Cozinheiro(String nome, ReceitaDeHamburguer receita) {
+		this.nome = nome;
 		this.receita = receita;
 	}
 	
@@ -11,16 +14,21 @@ public class Cozinheiro {
 		return this.receita.getHamburguer();
 	}
 	
+	
 	public void prepararHamburguer() {
-		System.out.println("Cortando pao");
+		System.out.println(nome +": Cortando pao do " + getHamburguer().getNome());
 		this.receita.cortaPao();
-		System.out.println("Derretendo queijo");
+		
+		System.out.println(nome +": Derretendo queijo do " + getHamburguer().getNome());
 		this.receita.derreteQueijo();
-		System.out.println("Picando salada");
+		
+		System.out.println(nome +": Picando salada do " + getHamburguer().getNome());
 		this.receita.picaSalada();
-		System.out.println("Preparando molho");
+		
+		System.out.println(nome +": Preparando molho do " + getHamburguer().getNome());
 		this.receita.preparaMolho();
-		System.out.println("Fritando carne");
+		
+		System.out.println(nome +": Fritando carne do " + getHamburguer().getNome());
 		this.receita.fritaCarne();
 	}
 	

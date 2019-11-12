@@ -5,6 +5,7 @@ public class BigMac implements ReceitaDeHamburguer{
 	
 	public BigMac() {
 		this.hamburguer = new Hamburguer();
+		hamburguer.setNome("BigMac");
 	}
 	
 	@Override
